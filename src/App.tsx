@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashRouter } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import BasicConceptsExpanded from './sections/BasicConceptsExpanded';
 import ControlStructures from './sections/ControlStructures';
@@ -10,7 +11,7 @@ import StreamsAndLambdas from './sections/StreamsAndLambdas';
 import ConcurrencyThreads from './sections/ConcurrencyThreads';
 import FileIO from './sections/FileIO';
 import JPAEntities from './sections/JPAEntities';
-import SpringCore from './sections/SpringCore';
+// import SpringCore from './sections/SpringCore';
 import SpringBoot from './sections/SpringBoot';
 import Testing from './sections/Testing';
 
@@ -40,7 +41,7 @@ function App() {
       case 'jpa':
         return <JPAEntities />;
       case 'springcore':
-        return <SpringCore />;
+        return <div className="max-w-4xl mx-auto px-4 py-8"><h1 className="text-3xl font-bold">Spring Core - En desarrollo</h1></div>;
       case 'springboot':
         return <SpringBoot />;
       case 'testing':
@@ -51,22 +52,24 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
-      <main className="py-8">
-        {renderSection()}
-      </main>
-      <footer className="bg-gray-800 text-white py-6 mt-12">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-sm">
-            © 2026 Java Learning Platform - De Junior a Mid Level
-          </p>
-          <p className="text-xs mt-2 text-gray-400">
-            Aprende Java desde los fundamentos hasta Spring Boot con ejemplos prácticos y explicaciones detalladas
-          </p>
-        </div>
-      </footer>
-    </div>
+    <HashRouter>
+      <div className="min-h-screen bg-gray-50">
+        <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
+        <main className="py-8">
+          {renderSection()}
+        </main>
+        <footer className="bg-gray-800 text-white py-6 mt-12">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <p className="text-sm">
+              © 2026 Java Learning Platform - De Junior a Mid Level
+            </p>
+            <p className="text-xs mt-2 text-gray-400">
+              Aprende Java desde los fundamentos hasta Spring Boot con ejemplos prácticos y explicaciones detalladas
+            </p>
+          </div>
+        </footer>
+      </div>
+    </HashRouter>
   );
 }
 

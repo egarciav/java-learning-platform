@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Java Learning Platform</title>
+    <script type="text/javascript">
+      // Redirigir todas las rutas a index.html para React Router
+      var segmentCount = 0;
+      var l = window.location;
+      l.replace(
+        /\?[^#]*.*/,
+        ''
+      );
+      l = l.replace(
+        /#[^#]*/,
+        ''
+      );
+      var path = l.split('/');
+      segmentCount = path.length;
+      if (segmentCount > 1) {
+        l = l.substring(0, l.lastIndexOf('/'));
+        path = l.substring(l.lastIndexOf('/') + 1);
+      }
+      var newPath = '/java-learning-platform/#/' + path;
+      window.location.replace(newPath);
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Redirigiendo a Java Learning Platform...</h1>
+      <p>Si no redirige automáticamente, haz clic <a href="/java-learning-platform/">aquí</a></p>
+    </div>
+  </body>
+</html>
