@@ -9,7 +9,10 @@
 /coverage
 
 # production
-/build
+# /build (comentado para permitir archivos de producción en GitHub Pages)
+
+# Pero ignorar la carpeta build local
+/build/
 
 # misc
 .DS_Store
