@@ -11,7 +11,7 @@ import StreamsAndLambdas from './sections/StreamsAndLambdas';
 import ConcurrencyThreads from './sections/ConcurrencyThreads';
 import FileIO from './sections/FileIO';
 import JPAEntities from './sections/JPAEntities';
-// import SpringCore from './sections/SpringCore';
+import SpringCore from './sections/SpringCore';
 import SpringBoot from './sections/SpringBoot';
 import Testing from './sections/Testing';
 
@@ -41,7 +41,7 @@ function App() {
       case 'jpa':
         return <JPAEntities />;
       case 'springcore':
-        return <div className="max-w-4xl mx-auto px-4 py-8"><h1 className="text-3xl font-bold">Spring Core - En desarrollo</h1></div>;
+        return <SpringCore />;
       case 'springboot':
         return <SpringBoot />;
       case 'testing':
