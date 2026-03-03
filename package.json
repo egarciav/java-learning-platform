@@ -1,6 +1,7 @@
 {
   "name": "java-learning-platform",
   "version": "0.1.0",
+  "homepage": "https://egarciav.github.io/java-learning-platform",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
